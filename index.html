@@ -7,37 +7,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
-:root{
-  --red:#FF0000;
-  --dark:#21202E;
-  --gray70:#656565;
-  --gray30:#BABABA;
-  --gray10:#EAEAEA;
-  --white:#FFFFFF;
-  --blue:#0032D8;
-  --yellow:#EEFF66;
-  --bg:#F2F2F0;
-  --card:#FFFFFF;
-}
+:root{--red:#FF0000;--dark:#21202E;--gray70:#656565;--gray30:#BABABA;--gray10:#EAEAEA;--blue:#0032D8;--bg:#F2F2F0;--card:#FFFFFF;}
 body{font-family:'Poppins',Arial,sans-serif;background:var(--bg);color:var(--dark);font-size:13px;}
-
-/* ── TOPBAR ── */
 .topbar{background:var(--dark);height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;border-bottom:3px solid var(--red);}
 .logo-area{display:flex;align-items:center;gap:10px;}
 .logo-box{background:var(--red);width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;}
-.logo-box svg{width:18px;height:18px;}
-.logo-name{color:#fff;font-size:16px;font-weight:700;letter-spacing:-0.02em;}
-.logo-sep{width:1px;height:16px;background:rgba(255,255,255,0.2);margin:0 4px;}
+.logo-name{color:#fff;font-size:16px;font-weight:700;}
+.logo-sep{width:1px;height:16px;background:rgba(255,255,255,0.2);margin:0 8px;}
 .logo-sub{color:rgba(255,255,255,0.5);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;}
-.topbar-right{display:flex;align-items:center;gap:8px;}
-.tb-btn{width:32px;height:32px;border-radius:6px;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;background:transparent;}
-.tb-btn svg{width:14px;height:14px;stroke:rgba(255,255,255,0.7);fill:none;stroke-width:2;}
-.tb-badge{position:absolute;top:-3px;right:-3px;width:7px;height:7px;border-radius:50%;background:var(--red);border:1.5px solid var(--dark);}
-.user-pill{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,0.08);border-radius:20px;padding:4px 12px 4px 4px;cursor:pointer;}
-.user-av{width:26px;height:26px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;}
-.user-nm{color:rgba(255,255,255,0.85);font-size:12px;font-weight:600;}
-
-/* ── HERO ── */
 .hero{background:var(--red);padding:22px 24px 20px;position:relative;overflow:hidden;}
 .hero-lines{position:absolute;right:0;top:0;bottom:0;display:flex;gap:5px;align-items:flex-end;padding:0 12px 0 0;}
 .hero-line{width:18px;background:rgba(0,0,0,0.1);}
@@ -48,4 +25,196 @@ body{font-family:'Poppins',Arial,sans-serif;background:var(--bg);color:var(--dar
 .hero-stats{display:flex;gap:8px;flex-wrap:wrap;}
 .hpill{background:rgba(0,0,0,0.15);border:1px solid rgba(255,255,255,0.2);border-radius:4px;padding:8px 12px;min-width:72px;}
 .hpill-n{color:#fff;font-size:20px;font-weight:900;line-height:1;}
-.hpill-l{color:rgba(255,255,255,0.6);font-size:9px;font-weight:400;margin-top:1px;line-height:1.3;text-transform:uppercase;letter-spacing:0.04em;}
+.hpill-l{color:rgba(255,255,255,0.6);font-size:9px;font-weight:400;margin-top:1px;text-transform:uppercase;letter-spacing:0.04em;}
+.nav{background:var(--dark);display:flex;align-items:center;padding:0 20px;gap:0;overflow-x:auto;}
+.nav::-webkit-scrollbar{display:none;}
+.ni{padding:12px 13px;font-size:11px;font-weight:700;color:rgba(255,255,255,0.45);cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;text-transform:uppercase;letter-spacing:0.04em;transition:color 0.15s;}
+.ni.act{color:#fff;border-bottom-color:var(--red);}
+.ni:hover:not(.act){color:rgba(255,255,255,0.75);}
+.body{display:grid;grid-template-columns:minmax(0,1fr) 268px;gap:14px;padding:16px 20px;background:var(--bg);}
+.main,.side{display:flex;flex-direction:column;gap:14px;}
+.card{background:var(--card);border-radius:8px;overflow:hidden;border:0.5px solid rgba(0,0,0,0.06);}
+.ch{padding:13px 16px 0;display:flex;align-items:center;justify-content:space-between;}
+.ct{font-size:11px;font-weight:700;color:var(--dark);text-transform:uppercase;letter-spacing:0.06em;display:flex;align-items:center;gap:7px;}
+.ct-bar{width:3px;height:13px;background:var(--red);flex-shrink:0;border-radius:1px;}
+.ca{font-size:10px;color:var(--red);font-weight:700;cursor:pointer;text-decoration:none;}
+.cb{padding:11px 16px 15px;}
+.sc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:12px 16px 14px;}
+.sc{display:flex;flex-direction:column;align-items:center;gap:5px;padding:12px 6px;border:1.5px solid var(--gray10);border-radius:6px;cursor:pointer;text-align:center;background:#FAFAFA;transition:border-color 0.15s,background 0.15s;}
+.sc:hover{border-color:var(--red);background:#fff5f5;}
+.sc-ic{width:36px;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:20px;}
+.sc-lb{font-size:10px;font-weight:600;color:var(--dark);line-height:1.3;}
+.cm{padding:10px 0;border-bottom:1px solid var(--gray10);display:flex;gap:9px;}
+.cm:last-child{border-bottom:none;}
+.cm-bar{width:3px;border-radius:2px;align-self:stretch;flex-shrink:0;}
+.cm-bar.r{background:var(--red);}.cm-bar.d{background:var(--dark);}.cm-bar.g{background:var(--gray30);}.cm-bar.b{background:var(--blue);}
+.cm-tag{display:inline-block;font-size:9px;padding:1px 6px;border-radius:2px;font-weight:700;text-transform:uppercase;margin-bottom:3px;}
+.tg-u{background:var(--red);color:#fff;}.tg-n{background:var(--dark);color:#fff;}.tg-l{background:var(--gray10);color:var(--gray70);}.tg-e{background:var(--blue);color:#fff;}
+.cm-tx{font-size:12px;color:var(--dark);line-height:1.4;}
+.cm-mt{font-size:10px;color:var(--gray70);margin-top:2px;}
+.doc-g{display:grid;grid-template-columns:1fr 1fr;gap:7px;}
+.doc{background:#F7F7F7;border:1px solid var(--gray10);border-radius:5px;padding:9px 11px;display:flex;align-items:flex-start;gap:9px;cursor:pointer;transition:border-color 0.15s;}
+.doc:hover{border-color:var(--red);}
+.doc-tp{width:30px;height:34px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;flex-shrink:0;}
+.tp-pdf{background:var(--red);color:#fff;}.tp-xls{background:var(--dark);color:#fff;}.tp-ppt{background:var(--gray30);color:var(--dark);}.tp-doc{background:var(--blue);color:#fff;}
+.doc-nm{font-size:11px;font-weight:600;color:var(--dark);line-height:1.3;}
+.doc-mt{font-size:9px;color:var(--gray70);margin-top:1px;}
+.kpi-g{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:11px;}
+.kpi{border-radius:5px;padding:9px 11px;}
+.kpi.r{background:var(--red);}.kpi.d{background:var(--dark);}.kpi.lt{background:var(--gray10);}
+.kpi-v{font-size:20px;font-weight:900;color:#fff;line-height:1;}
+.kpi.lt .kpi-v{color:var(--dark);}
+.kpi-l{font-size:9px;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:0.04em;}
+.kpi.lt .kpi-l{color:var(--gray70);}
+.pg{margin-bottom:8px;}.pg:last-child{margin-bottom:0;}
+.pg-hd{display:flex;justify-content:space-between;font-size:10px;color:var(--gray70);margin-bottom:3px;}
+.pg-hd b{color:var(--dark);font-weight:700;}
+.pg-tr{height:4px;background:var(--gray10);}
+.pg-fl{height:100%;transition:width 0.8s ease;}
+.fl-r{background:var(--red);}.fl-d{background:var(--dark);}.fl-b{background:var(--blue);}
+.bday-banner{background:var(--red);border-radius:8px;padding:13px 15px;display:flex;align-items:center;justify-content:space-between;}
+.bb-lb{color:rgba(255,255,255,0.65);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:3px;}
+.bb-nms{color:#fff;font-size:13px;font-weight:700;line-height:1.4;}
+.bd-item{display:flex;align-items:center;gap:9px;padding:8px 0;border-bottom:1px solid var(--gray10);}
+.bd-item:last-child{border-bottom:none;}
+.bd-av{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;}
+.bd-av.r{background:var(--red);color:#fff;}.bd-av.d{background:var(--dark);color:#fff;}.bd-av.b{background:var(--blue);color:#fff;}
+.bd-nm{font-size:11px;font-weight:700;color:var(--dark);}
+.bd-dp{font-size:10px;color:var(--gray70);}
+.bd-dt{font-size:10px;font-weight:700;color:var(--gray70);margin-left:auto;}
+.ev-item{display:flex;gap:11px;padding:9px 0;border-bottom:1px solid var(--gray10);}
+.ev-item:last-child{border-bottom:none;}
+.ev-date{text-align:center;width:32px;flex-shrink:0;}
+.ev-day{font-size:18px;font-weight:900;color:var(--red);line-height:1;}
+.ev-mo{font-size:8px;color:var(--gray70);text-transform:uppercase;font-weight:700;}
+.ev-nm{font-size:11px;font-weight:700;color:var(--dark);line-height:1.3;}
+.ev-ti{font-size:10px;color:var(--gray70);margin-top:1px;}
+.ev-bg{display:inline-block;font-size:8px;padding:1px 5px;font-weight:700;text-transform:uppercase;margin-top:2px;border-radius:2px;}
+.bg-o{background:var(--gray10);color:var(--gray70);}.bg-d{background:var(--dark);color:#fff;}.bg-r{background:var(--red);color:#fff;}.bg-b{background:var(--blue);color:#fff;}
+.obra-it{margin-bottom:10px;}.obra-it:last-child{margin-bottom:0;}
+.obra-hd{display:flex;justify-content:space-between;margin-bottom:2px;}
+.obra-nm{font-size:10px;font-weight:700;color:var(--dark);}
+.obra-sb{font-size:9px;color:var(--gray70);margin-bottom:3px;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.card{animation:fadeUp 0.3s ease both;}
+.card:nth-child(1){animation-delay:0.05s;}
+.card:nth-child(2){animation-delay:0.1s;}
+.card:nth-child(3){animation-delay:0.15s;}
+.card:nth-child(4){animation-delay:0.2s;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="logo-area">
+    <div class="logo-box"><svg viewBox="0 0 18 18" fill="none"><rect x="1" y="1" width="7" height="7" rx="1.5" fill="white"/><rect x="10" y="1" width="7" height="7" rx="1.5" fill="white" opacity=".65"/><rect x="1" y="10" width="7" height="7" rx="1.5" fill="white" opacity=".65"/><rect x="10" y="10" width="7" height="7" rx="1.5" fill="white" opacity=".35"/></svg></div>
+    <span class="logo-name">Playpiso</span>
+    <div class="logo-sep"></div>
+    <span class="logo-sub">Portal do colaborador</span>
+  </div>
+</div>
+<div class="hero">
+  <div class="hero-lines"><div class="hero-line" style="height:100%"></div><div class="hero-line" style="height:70%"></div><div class="hero-line" style="height:100%"></div><div class="hero-line" style="height:50%"></div><div class="hero-line" style="height:85%"></div></div>
+  <div style="position:relative;z-index:1;">
+    <div class="hero-eyebrow" id="hero-date">Carregando...</div>
+    <div class="hero-title">Bom dia,<br><em>Colaborador.</em></div>
+    <div class="hero-tagline">O jogo se ganha nos detalhes — e começa aqui.</div>
+    <div class="hero-stats">
+      <div class="hpill"><div class="hpill-n">42</div><div class="hpill-l">Colaboradores</div></div>
+      <div class="hpill"><div class="hpill-n">3</div><div class="hpill-l">Comunicados</div></div>
+      <div class="hpill"><div class="hpill-n">5</div><div class="hpill-l">Obras ativas</div></div>
+      <div class="hpill"><div class="hpill-n">2</div><div class="hpill-l">Aniversários</div></div>
+    </div>
+  </div>
+</div>
+<div class="nav">
+  <div class="ni act">Início</div><div class="ni">Comunicados</div><div class="ni">Políticas</div>
+  <div class="ni">Colaboradores</div><div class="ni">Agenda</div><div class="ni">Indicadores</div><div class="ni">Benefícios</div>
+</div>
+<div class="body">
+  <div class="main">
+    <div class="card">
+      <div class="sc-grid">
+        <div class="sc"><div class="sc-ic" style="background:#FF0000">📢</div><span class="sc-lb">Novo comunicado</span></div>
+        <div class="sc"><div class="sc-ic" style="background:#21202E">📄</div><span class="sc-lb">Upload política</span></div>
+        <div class="sc"><div class="sc-ic" style="background:#EAEAEA">👤</div><span class="sc-lb">Novo colaborador</span></div>
+        <div class="sc"><div class="sc-ic" style="background:#0032D8">🏗️</div><span class="sc-lb">Nova obra</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ch"><div class="ct"><div class="ct-bar"></div>Comunicados recentes</div><a class="ca" href="#">ver todos →</a></div>
+      <div class="cb">
+        <div class="cm"><div class="cm-bar r"></div><div><span class="cm-tag tg-u">Urgente</span><div class="cm-tx">Novo sistema de ponto eletrônico entra em vigor em 1º de maio. Todos os colaboradores devem se recadastrar.</div><div class="cm-mt">Hoje às 09:14 · RH</div></div></div>
+        <div class="cm"><div class="cm-bar d"></div><div><span class="cm-tag tg-n">Novidade</span><div class="cm-tx">Vale-refeição reajustado para R$ 38,00/dia a partir de maio. Confira o novo saldo no app de benefícios.</div><div class="cm-mt">05/04/2026 · Financeiro</div></div></div>
+        <div class="cm"><div class="cm-bar g"></div><div><span class="cm-tag tg-l">Lembrete</span><div class="cm-tx">Prazo para entrega de documentos do IR: até 30 de abril. Dúvidas? Procure o RH.</div><div class="cm-mt">03/04/2026 · RH</div></div></div>
+        <div class="cm"><div class="cm-bar b"></div><div><span class="cm-tag tg-e">Evento</span><div class="cm-tx">Confraternização de Páscoa na sede Barueri: sexta-feira 11/04 às 17h.</div><div class="cm-mt">01/04/2026 · Administrativo</div></div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ch"><div class="ct"><div class="ct-bar"></div>Políticas e documentos</div><a class="ca" href="#">biblioteca →</a></div>
+      <div class="cb">
+        <div class="doc-g">
+          <div class="doc"><div class="doc-tp tp-pdf">PDF</div><div><div class="doc-nm">Código de Conduta 2026</div><div class="doc-mt">mar/2026 · 1,2 MB</div></div></div>
+          <div class="doc"><div class="doc-tp tp-pdf">PDF</div><div><div class="doc-nm">Política de Segurança do Trabalho</div><div class="doc-mt">jan/2026 · 890 KB</div></div></div>
+          <div class="doc"><div class="doc-tp tp-xls">XLS</div><div><div class="doc-nm">Plano de Benefícios</div><div class="doc-mt">fev/2026 · 345 KB</div></div></div>
+          <div class="doc"><div class="doc-tp tp-ppt">PPT</div><div><div class="doc-nm">Onboarding Playpiso</div><div class="doc-mt">dez/2025 · 4,1 MB</div></div></div>
+          <div class="doc"><div class="doc-tp tp-pdf">PDF</div><div><div class="doc-nm">Manual de EPIs — Campo</div><div class="doc-mt">mar/2026 · 670 KB</div></div></div>
+          <div class="doc"><div class="doc-tp tp-doc">DOC</div><div><div class="doc-nm">Modelo Atestado Médico</div><div class="doc-mt">jan/2026 · 45 KB</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ch"><div class="ct"><div class="ct-bar"></div>Indicadores de RH</div><a class="ca" href="#">relatório →</a></div>
+      <div class="cb">
+        <div class="kpi-g">
+          <div class="kpi r"><div class="kpi-v">42</div><div class="kpi-l">Colaboradores</div></div>
+          <div class="kpi d"><div class="kpi-v">3,2%</div><div class="kpi-l">Absenteísmo</div></div>
+          <div class="kpi lt"><div class="kpi-v">7</div><div class="kpi-l">Vagas abertas</div></div>
+        </div>
+        <div class="pg"><div class="pg-hd"><span>Treinamentos concluídos</span><span><b>78%</b></span></div><div class="pg-tr"><div class="pg-fl fl-r" style="width:78%"></div></div></div>
+        <div class="pg"><div class="pg-hd"><span>Avaliações entregues</span><span><b>55%</b></span></div><div class="pg-tr"><div class="pg-fl fl-d" style="width:55%"></div></div></div>
+        <div class="pg"><div class="pg-hd"><span>Assinaturas LGPD</span><span><b>91%</b></span></div><div class="pg-tr"><div class="pg-fl fl-b" style="width:91%"></div></div></div>
+        <div class="pg"><div class="pg-hd"><span>Exames ASO em dia</span><span><b>84%</b></span></div><div class="pg-tr"><div class="pg-fl fl-r" style="width:84%"></div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="side">
+    <div class="bday-banner">
+      <div><div class="bb-lb">Aniversariantes hoje</div><div class="bb-nms">João Carlos<br>Ana Ferreira</div></div>
+      <div style="font-size:32px">🎂</div>
+    </div>
+    <div class="card">
+      <div class="ch"><div class="ct"><div class="ct-bar"></div>Próximos aniversários</div></div>
+      <div class="cb">
+        <div class="bd-item"><div class="bd-av r">RL</div><div><div class="bd-nm">Ricardo Lima</div><div class="bd-dp">Obras — SP</div></div><div class="bd-dt">10/04</div></div>
+        <div class="bd-item"><div class="bd-av d">PS</div><div><div class="bd-nm">Patricia Souza</div><div class="bd-dp">Administrativo</div></div><div class="bd-dt">11/04</div></div>
+        <div class="bd-item"><div class="bd-av b">MF</div><div><div class="bd-nm">Miguel Ferraz</div><div class="bd-dp">Comercial</div></div><div class="bd-dt">18/04</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ch"><div class="ct"><div class="ct-bar"></div>Agenda</div><a class="ca" href="#">ver tudo →</a></div>
+      <div class="cb">
+        <div class="ev-item"><div class="ev-date"><div class="ev-day">07</div><div class="ev-mo">Abr</div></div><div><div class="ev-nm">Reunião de obras SP</div><div class="ev-ti">09:00 · Sala virtual</div><span class="ev-bg bg-o">Obras</span></div></div>
+        <div class="ev-item"><div class="ev-date"><div class="ev-day">09</div><div class="ev-mo">Abr</div></div><div><div class="ev-nm">Entrega documentos ASO</div><div class="ev-ti">Prazo final · RH</div><span class="ev-bg bg-d">RH</span></div></div>
+        <div class="ev-item"><div class="ev-date"><div class="ev-day">11</div><div class="ev-mo">Abr</div></div><div><div class="ev-nm">Confraternização Páscoa</div><div class="ev-ti">17:00 · Sede Barueri</div><span class="ev-bg bg-r">Todos</span></div></div>
+        <div class="ev-item"><div class="ev-date"><div class="ev-day">15</div><div class="ev-mo">Abr</div></div><div><div class="ev-nm">Treinamento NR-35</div><div class="ev-ti">08:00 · Presencial Barueri</div><span class="ev-bg bg-b">Campo</span></div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ch"><div class="ct"><div class="ct-bar"></div>Obras em andamento</div><a class="ca" href="#">todas →</a></div>
+      <div class="cb">
+        <div class="obra-it"><div class="obra-hd"><span class="obra-nm">Quadra Society · Campinas</span><span style="font-size:10px;font-weight:900;color:var(--red)">82%</span></div><div class="obra-sb">Prazo: 25/04 · 6 colaboradores</div><div class="pg-tr"><div class="pg-fl fl-r" style="width:82%"></div></div></div>
+        <div class="obra-it"><div class="obra-hd"><span class="obra-nm">Pista de Atletismo · SP</span><span style="font-size:10px;font-weight:900;color:var(--dark)">47%</span></div><div class="obra-sb">Prazo: 15/05 · 9 colaboradores</div><div class="pg-tr"><div class="pg-fl fl-d" style="width:47%"></div></div></div>
+        <div class="obra-it"><div class="obra-hd"><span class="obra-nm">Quadra Poliesportiva · Santos</span><span style="font-size:10px;font-weight:900;color:var(--blue)">20%</span></div><div class="obra-sb">Prazo: 30/06 · 4 colaboradores</div><div class="pg-tr"><div class="pg-fl fl-b" style="width:20%"></div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+const days=['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'];
+const months=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+const now=new Date();
+document.getElementById('hero-date').textContent=days[now.getDay()]+', '+now.getDate()+' de '+months[now.getMonth()]+' de '+now.getFullYear();
+document.querySelectorAll('.ni').forEach(ni=>{ni.addEventListener('click',()=>{document.querySelectorAll('.ni').forEach(n=>n.classList.remove('act'));ni.classList.add('act');});});
+</script>
+</body>
+</html>
